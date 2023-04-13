@@ -1,0 +1,12 @@
+<title>ERREUR D'AUTHENTIFICATION</title>
+{% extends 'base.html' %}
+{% block content %}
+    <script>
+        alert('erreur de connexion !!! veuiller verifier vos information et resseyer')
+    </script>
+<center>
+        <div class="position-absolute top-50 end-50 ">
+            <h2><a class="nav-link nav-info"  href="{% url 'login' %}"><button class="btn btn-danger">cliker ici pour verifier vos information</button></a></h2>
+        </div>
+</center>
+{% endblock %}

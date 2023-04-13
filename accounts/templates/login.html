@@ -1,0 +1,43 @@
+<title>CONNEXION</title>
+{% extends 'base.html' %}
+
+
+{% block content %}
+
+
+<style>
+    body{
+        background-color: rgb(29, 31, 30);
+        background-size: cover;
+        font-family: 'Times New Roman', Times, serif;
+        font-size:auto;
+    }
+    .form{
+        border-radius: 15px;
+        width: 700px;
+        height: 500px;
+        box-shadow: 5px 5px 50px 50px #888888;
+    }
+    input{
+        margin: 0;
+        padding: o;
+        border-radius: 15px;
+        position: center;
+        box-shadow: 2px 2px 2px 2px blue;
+    }
+</style>
+<center>
+    <div class="my-5 form text-light m-3 py-3">
+        <h1>CONNEXION</h1><br><br>
+        <form method="post">
+            {% csrf_token%}
+            <label for="username" class="my-3">Nom d'utlisateur</label><br>
+            <input type="text" name="username" id="username" placeholder="username"><br><br>
+            <label for="password">password</label><br><br>
+            <input type="password" name="password" id="password" placeholder="password"><br><br>
+            <button type="submit"> CONNEXION </button><br><br>
+        </form>
+        <p><h3>Si vous navez pas de compte veillezvous inscrire <br> <a  href="{% url 'signup' %}"><button class="btn btn-info">ici</button></a></h3></p>
+    </div>
+</center>
+{% endblock  %}

@@ -1,0 +1,52 @@
+<title>INSCRIPTION</title>
+{% extends 'base.html' %}
+
+
+{% block content %}
+
+
+<center>
+    <div class="container form p-3 my-5 text-light text-center">
+        <h1>INSCRIPTION</h1>
+        <form method="POST">
+            {% csrf_token %}
+            {{ form.as_p }}
+            <button type="submit">INSCRIPTION</button>
+        </form>
+        <p><h3>Si vous avez deja un compte veillez vous authentifiez <a  href="{% url 'login' %}"><button class="btn btn-info">ici</button></a></h3></p>
+</div>
+</center>
+<!-- <div class="loic"><h1>kvkkkhjvvjsksb <br> jhjjhvjbbjvbv <br> hjghhjeje</h1></div> -->
+
+<style>
+    li{
+        list-style-type:decimal;
+        font-family: 'Courier New', Courier, monospace;
+    }
+    body{
+        background-color: rgb(29, 31, 30);
+        background-size: cover;
+        font-family: 'Times New Roman', Times, serif;
+        font-size:auto;
+    }
+    .form{
+        border-radius: 15px;
+        width: auto;
+        height: auto;
+        box-shadow: 5px 5px 50px 50px #413e3e;
+    }
+    input{
+        margin: 0;
+        padding: o;
+        border-radius: 15px;
+        position: center;
+        box-shadow: 2px 2px 2px 2px blue;
+    }
+    /* .loic{
+        width: 284px;
+        padding: 10px 10px 20px 10px;
+        border: 1px solid #bfbfbf;
+        box-shadow: 10px 10px 5px #aaaaaa;
+    } */
+</style>
+{% endblock %}
